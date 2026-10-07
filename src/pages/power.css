@@ -1,0 +1,106 @@
+.powers-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+    padding: 6rem 6%;
+    box-sizing: border-box;
+}
+
+.powers-content {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+.powers-eyebrow {
+    color: #1c98e8;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18rem;
+    margin-bottom: 1rem;
+}
+
+.powers-content h1 {
+    max-width: 700px;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    line-height: 0.98;
+    margin: 0;
+}
+
+.powers-intro {
+    max-width: 560px;
+    color: #b7b7b7;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 1.5rem 0 3rem;
+}
+
+.powers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.power-card {
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #292929;
+    border-top: 3px solid #1c98e8;
+    background-color: #121212;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.power-card.red {
+    border-top-color: #e32929;
+}
+
+.power-card:hover {
+    transform: translateY(-5px);
+    border-color: #1c98e8;
+}
+
+.power-card.red:hover {
+    border-color: #e32929;
+}
+
+.power-number {
+    color: #777;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+}
+
+.power-card h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.6rem;
+}
+
+.power-card p {
+    color: #aaa;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .powers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 540px) {
+    .powers-container {
+        padding: 5rem 1.25rem;
+    }
+
+    .powers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
